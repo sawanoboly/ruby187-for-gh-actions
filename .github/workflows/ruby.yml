@@ -19,10 +19,10 @@ jobs:
     container: ghcr.io/sawanoboly/ruby187-for-gh-actions:latest
 
     steps:
-    - name: clone sournce
-      run: git clone https://github.com/mizzy/specinfra.git
-    - name: Run tests
+    - name: ruby test
       run: |
+        git clone https://github.com/mizzy/specinfra.git
+        ruby -v
         cd specinfra
         bundle install
         bundle exec rake spec
